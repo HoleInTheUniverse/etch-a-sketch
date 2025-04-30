@@ -1,5 +1,7 @@
 // Declarations
 const container = document.querySelector(".container");
+const gridSize = document.querySelector("#grid-size");
+const button = document.querySelector("#create-button");
 
 function fillBoard(size) {
 
@@ -18,8 +20,20 @@ function fillBoard(size) {
     }
 }
 
-
+function clearBoard() {
+    while(container.firstChild) container.removeChild(container.firstChild);
+}
 
 // Initialize board
 
 fillBoard(16);
+button.addEventListener("click", () => {
+    let size = parseInt(gridSize.value);
+    if(!(size >=1 && size <= 100)) {
+        alert("Enter a value between 1 and 100");
+        return;
+    }
+
+    clearBoard();
+    fillBoard(size);
+});
