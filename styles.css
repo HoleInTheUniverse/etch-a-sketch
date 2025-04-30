@@ -29,17 +29,14 @@ form > * {
 
     display: flex;
     flex-direction: column;
-    gap: 1px;
 }
 
 .line {
     display: flex;
-    gap: 1px;
     flex: 1;
 }
 
 .cell {
-    border: 1px solid black;
     background-color: white;
     flex: 1;
 }
