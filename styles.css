@@ -28,3 +28,7 @@
     background-color: white;
     flex: 1;
 }
+
+.hovered {
+    background-color: aqua;
+}

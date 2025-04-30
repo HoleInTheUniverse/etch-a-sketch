@@ -1,17 +1,19 @@
 // Declarations
+const container = document.querySelector(".container");
 
 function fillBoard(size) {
-    const container = document.querySelector(".container");
 
     for(let i = 0; i < size; i++) {
         let line = document.createElement("div");
-        line.className = "line";
+        line.classList.add("line");
         container.appendChild(line);
 
         for (let j = 0; j < size; j++) {
             let cell = document.createElement("div");
-            cell.className = "cell";
+            cell.classList.add("cell");
             line.appendChild(cell);
+
+            cell.addEventListener("mouseenter", () => cell.classList.add("hovered"));
         }        
     }
 }
