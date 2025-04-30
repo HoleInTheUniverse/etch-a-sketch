@@ -15,7 +15,12 @@ function fillBoard(size) {
             cell.classList.add("cell");
             line.appendChild(cell);
 
-            cell.addEventListener("mouseenter", () => cell.classList.add("hovered"));
+            cell.addEventListener("mouseenter", () => {
+                cell.classList.add("hovered");
+
+                // Gradually increase opacity
+                if(Number(cell.style.opacity) < 1) cell.style.opacity = Number(cell.style.opacity) + 0.1;
+            });
         }        
     }
 }
