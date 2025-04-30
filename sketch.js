@@ -19,7 +19,8 @@ function fillBoard(size) {
                 cell.classList.add("hovered");
 
                 // Gradually increase opacity
-                if(Number(cell.style.opacity) < 1) cell.style.opacity = Number(cell.style.opacity) + 0.1;
+                if(Number(cell.style.opacity) < 0.5) cell.style.opacity = 0.5;
+                else if(Number(cell.style.opacity) < 1) cell.style.opacity = Number(cell.style.opacity) + 0.05;
             });
         }        
     }
